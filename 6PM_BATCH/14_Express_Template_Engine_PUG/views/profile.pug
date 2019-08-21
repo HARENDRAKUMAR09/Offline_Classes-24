@@ -1,0 +1,129 @@
+doctype html(lang='en')
+head
+  meta(charset='UTF-8')
+  |
+  meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+  |
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  |
+  link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin='anonymous')
+  |
+  link(rel='stylesheet', href='../public/bootstrap/css/font-awesome-5.8.1.css')
+  |
+  link(rel='stylesheet', href='../public/bootstrap/css/bootstrap.css')
+  |
+  link(rel='stylesheet', href='../public/bootstrap/css/mdb.css')
+  |
+  link(rel='stylesheet', href='../public/bootstrap/css/style.css')
+  |
+  title Express EJS
+body
+  // Main Navbar
+  nav.navbar.navbar-expand-md.navbar-dark.bg-primary
+    a.navbar-brand(href='/') Express PUG
+    |
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse', aria-controls='navbarCollapse', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    |
+    #navbarCollapse.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.px-2
+          a.nav-link(href='/')
+            i.fa.fa-home
+            |  Home
+        |
+        li.nav-item.px-2
+          a.nav-link(href='/about')
+            i.fa.fa-id-card
+            |  About Us
+        |
+        li.nav-item.px-2.active
+          a.nav-link(href='/profile')
+            i.fa.fa-user-circle
+            |  Profile
+        |
+        li.nav-item.px-2
+          a.nav-link(href='/services')
+            i.fa.fa-cogs
+            |  Services
+        |
+        li.nav-item.px-2
+          a.nav-link(href='/contact')
+            i.fa.fa-envelope
+            |  Contact Us
+  // Main Content Section
+  section
+    .jumbotron
+      h1.display-4.text-primary Welcome to Your Profile
+      |
+      p.lead
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aspernatur, commodi consequatur deleniti dolores eum facilis ipsa laudantium minus neque officiis omnis pariatur perferendis quaerat reiciendis rerum sunt totam voluptatum. Animi minima, neque odio recusandae tempore temporibus tenetur voluptas voluptatem?
+      |
+
+      .container.m-3
+        .row
+          .col-md-8.m-auto
+            .card
+              .card-header.bg-primary.text-white.text-center
+                h3 Selected Profile
+                - let randomNumber = Math.floor(Math.random() * 1000);
+                a.btn.btn-outline-white(href=`/profile/${randomNumber}`) Get Profile
+              .card-body.bg-light
+                ul.list-group
+                  li.list-group-item
+                    | Profile ID :
+                    span.font-weight-bold.text-primary #{selectedProfile.id}
+                  |
+                  li.list-group-item
+                    | First Name:
+                    span.font-weight-bold.text-primary #{selectedProfile.first_name}
+                  |
+                  li.list-group-item
+                    | Last Name :
+                    span.font-weight-bold.text-primary #{selectedProfile.last_name}
+                  |
+                  li.list-group-item
+                    | Email :
+                    span.font-weight-bold.text-primary #{selectedProfile.email}
+                  |
+                  li.list-group-item
+                    | Gender :
+                    span.font-weight-bold.text-primary #{selectedProfile.gender}
+                  |
+                  li.list-group-item
+                    | IP ADDRESS :
+                    span.font-weight-bold.text-primary #{selectedProfile.ip_address}
+
+
+      p.lead
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur assumenda beatae, cumque deleniti eum ex explicabo magnam minima, neque nesciunt perferendis possimus, quas quia tempore veniam voluptas? A ad atque consectetur consequuntur corporis dignissimos dolores dolorum facere facilis, incidunt libero perferendis, perspiciatis placeat quia quidem totam ullam? Illo, nesciunt.
+      |
+      p.lead
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis molestias omnis praesentium quia quo saepe similique tenetur voluptatum! Ab, accusamus adipisci ducimus incidunt ipsam magni, maxime molestiae optio quae saepe sequi similique vel voluptas! Deserunt harum laudantium neque nulla voluptates.
+      |
+      hr.my-4
+      |
+      p
+        | It uses utility classes for typography and spacing to space content out within the larger container.
+      |
+      a.btn.btn-primary.btn-lg(href='#', role='button') Learn more
+
+  // Main Footer
+  footer.p-3.bg-primary.text-white.text-center
+    .container
+      .row
+        .col
+          h3 Copyright &copy; 2019 , Express PUG
+          |
+          h6 All Rights Reserved
+          |
+          h6
+            | Developed &amp; Maintained by
+            a.text-white(href='https://github.com/thenaveensaggam', target='_blank')
+              i.fa.fa-users
+              |  UiBrains.com
+  // Scripts
+  script(src='../public/bootstrap/js/jquery-3.3.1.min.js')
+  script(src='../public/bootstrap/js/popper.min.js')
+  script(src='../public/bootstrap/js/bootstrap.js')
+  script(src='../public/bootstrap/js/mdb.js')

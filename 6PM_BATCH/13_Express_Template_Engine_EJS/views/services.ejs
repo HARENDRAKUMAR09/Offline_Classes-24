@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/bootstrap/css/font-awesome-5.8.1.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../public/bootstrap/css/style.css">
+    <title>Express EJS</title>
+</head>
+<body>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-success">
+        <a class="navbar-brand" href="/">Express EJS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="/">
+                       <i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="/about">
+                        <i class="fa fa-id-card"></i> About Us</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="/profile">
+                        <i class="fa fa-user-circle"></i> Profile</a>
+                </li>
+                <li class="nav-item px-2 active">
+                    <a class="nav-link" href="/services">
+                        <i class="fa fa-cogs"></i> Services</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="/contact">
+                        <i class="fa fa-envelope"></i> Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section>
+        <div class="jumbotron">
+            <h1 class="display-4 text-success">Services We Provide</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, aspernatur, commodi consequatur deleniti dolores eum facilis ipsa laudantium minus neque officiis omnis pariatur perferendis quaerat reiciendis rerum sunt totam voluptatum. Animi minima, neque odio recusandae tempore temporibus tenetur voluptas voluptatem?</p>
+
+            <!-- Users Table -->
+            <table class="table table-hover text-center">
+                <thead class="bg-dark text-white">
+                    <tr>
+                        <th>SNO</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>PASSWORD</th>
+                        <th>C PASSWORD</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%
+                        users.forEach(function (user) { %>
+                            <tr>
+                                <td>100</td>
+                                <td><%= user.username %></td>
+                                <td><%= user.email %></td>
+                                <td><%= user.password %></td>
+                                <td><%= user.c_password %></td>
+                            </tr>
+                    <%   }); %>
+                </tbody>
+            </table>
+
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur assumenda beatae, cumque deleniti eum ex explicabo magnam minima, neque nesciunt perferendis possimus, quas quia tempore veniam voluptas? A ad atque consectetur consequuntur corporis dignissimos dolores dolorum facere facilis, incidunt libero perferendis, perspiciatis placeat quia quidem totam ullam? Illo, nesciunt.</p>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis molestias omnis praesentium quia quo saepe similique tenetur voluptatum! Ab, accusamus adipisci ducimus incidunt ipsam magni, maxime molestiae optio quae saepe sequi similique vel voluptas! Deserunt harum laudantium neque nulla voluptates.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-success btn-lg" href="#" role="button">Learn more</a>
+        </div>
+    </section>
+
+    <!-- Main Footer -->
+    <footer class="p-3 bg-success text-white text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h3>Copyright &copy; 2019 , Express EJS</h3>
+                    <h6>All Rights Reserved</h6>
+                    <h6>Developed & Maintained by
+                        <a class="text-white" href="https://github.com/thenaveensaggam" target="_blank">
+                            <i class="fa fa-users"></i> UiBrains.com
+                        </a>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Scripts -->
+<script src="../public/bootstrap/js/jquery-3.3.1.min.js"></script>
+<script src="../public/bootstrap/js/popper.min.js"></script>
+<script src="../public/bootstrap/js/bootstrap.js"></script>
+<script src="../public/bootstrap/js/mdb.js"></script>
+</body>
+</html>
